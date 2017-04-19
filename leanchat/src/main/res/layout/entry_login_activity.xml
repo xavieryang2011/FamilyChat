@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/ic_launcher"/>
 
         <EditText
             android:id="@+id/activity_login_et_username"
