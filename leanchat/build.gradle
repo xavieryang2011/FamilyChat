@@ -10,11 +10,22 @@ android {
         targetSdkVersion 23
         multiDexEnabled true
     }
-
+    signingConfigs{
+        myConfig{
+            storeFile file("keystore/chat_keystore.jks")
+            storePassword "family_chat_20170420_xavier"
+            keyAlias "familychat"
+            keyPassword "family_chat_20170420_xavier"
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.myConfig
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug{
+            signingConfig signingConfigs.myConfig
         }
     }
 
@@ -30,6 +41,7 @@ android {
         quiet false
         abortOnError false
     }
+
 }
 
 dependencies {
