@@ -28,6 +28,10 @@ import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.ta.utdid2.android.utils.StringUtils;
+
+import static com.avoscloud.chat.BuildConfig.DEBUG;
+import static com.avoscloud.chat.util.ChannelUtils.getChannelFromApk;
 
 
 /**
@@ -75,7 +79,15 @@ public class MainActivity extends AVBaseActivity {
   protected void onResume() {
     super.onResume();
     UpdateService updateService = UpdateService.getInstance(this);
-    updateService.checkUpdate();
+//    updateService.checkUpdate();
+    //获取渠道名称 channel表示渠道
+    String channel = getChannelFromApk(this, "channel-");
+    if (StringUtils.isEmpty(channel)) {
+      channel = "tengxun";
+    }
+    if (DEBUG) {
+      Utils.toast(this,"当前渠道:" + channel);
+    }
   }
 
   private void initBaiduLocClient() {

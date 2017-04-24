@@ -70,7 +70,11 @@ public class DiscoverItemHolder extends LCIMCommonViewHolder<LeanchatUser> {
   public void bindData(LeanchatUser user) {
     leanchatUser = user;
     if (null != user) {
-      Picasso.with(getContext()).load(user.getAvatarUrl()).into(avatarView);
+      if(user.getAvatarUrl()==null||user.getAvatarUrl().equals("")){
+        Picasso.with(getContext()).load(R.drawable.lcim_default_avatar_icon).into(avatarView);
+      }else {
+        Picasso.with(getContext()).load(user.getAvatarUrl()).into(avatarView);
+      }
       AVGeoPoint geoPoint = user.getAVGeoPoint(LeanchatUser.LOCATION);
       String currentLat = String.valueOf(location.getLatitude());
       String currentLong = String.valueOf(location.getLongitude());
@@ -90,7 +94,7 @@ public class DiscoverItemHolder extends LCIMCommonViewHolder<LeanchatUser> {
       nameView.setText("");
       distanceView.setText("");
       loginTimeView.setText("");
-      avatarView.setImageResource(0);
+      avatarView.setImageResource(R.drawable.lcim_default_avatar_icon);
     }
   }
 

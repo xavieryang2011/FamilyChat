@@ -69,7 +69,11 @@ public class ProfileFragment extends BaseFragment {
   private void refresh() {
     LeanchatUser curUser = LeanchatUser.getCurrentUser();
     userNameView.setText(curUser.getUsername());
-    Picasso.with(getContext()).load(curUser.getAvatarUrl()).into(avatarView);
+    if(curUser.getAvatarUrl()==null||curUser.getAvatarUrl().equals("")){
+      Picasso.with(getContext()).load(R.drawable.lcim_default_avatar_icon).into(avatarView);
+    }else {
+      Picasso.with(getContext()).load(curUser.getAvatarUrl()).into(avatarView);
+    }
   }
 
   @OnClick(R.id.profile_checkupdate_view)
@@ -106,9 +110,10 @@ public class ProfileFragment extends BaseFragment {
 
   @OnClick(R.id.profile_avatar_layout)
   public void onAvatarClick() {
-    Intent intent = new Intent(Intent.ACTION_PICK, null);
-    intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-    startActivityForResult(intent, IMAGE_PICK_REQUEST);
+    //TODO
+//    Intent intent = new Intent(Intent.ACTION_PICK, null);
+//    intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+//    startActivityForResult(intent, IMAGE_PICK_REQUEST);
   }
 
   @Override
