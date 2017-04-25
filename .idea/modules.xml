@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/leanchat/leanchat.iml" filepath="$PROJECT_DIR$/leanchat/leanchat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/familychat/familychat.iml" filepath="$PROJECT_DIR$/familychat/familychat.iml" />
       <module fileurl="file://$PROJECT_DIR$/leanchat-android-master.iml" filepath="$PROJECT_DIR$/leanchat-android-master.iml" />
     </modules>
   </component>

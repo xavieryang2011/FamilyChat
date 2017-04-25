@@ -41,8 +41,8 @@ public class App extends Application {
     ctx = this;
     Utils.fixAsyncTaskBug();
 
-    String appId = "x3o016bxnkpyee7e9pa5pre6efx2dadyerdlcez0wbzhw25g";
-    String appKey = "057x24cfdzhffnl3dzk14jh9xo2rq6w1hy1fdzt5tv46ym78";
+    String appId = "QqifnDfx0YHEKskeaQ5bcwhP-gzGzoHsz";
+    String appKey = "kSC0wlNtX1a6wwnmgQJiGswI";
 
     LeanchatUser.alwaysUseSubUserClass(LeanchatUser.class);
 

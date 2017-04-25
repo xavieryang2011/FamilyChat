@@ -21,6 +21,7 @@ import com.avoscloud.chat.model.LeanchatUser;
 import com.avoscloud.chat.redpacket.RedPacketUtils;
 import com.avoscloud.chat.service.PreferenceMap;
 import com.avoscloud.chat.service.UpdateService;
+import com.avoscloud.chat.util.ChannelUtils;
 import com.avoscloud.chat.util.LogUtils;
 import com.avoscloud.chat.util.UserCacheUtils;
 import com.avoscloud.chat.util.Utils;
@@ -80,14 +81,6 @@ public class MainActivity extends AVBaseActivity {
     super.onResume();
     UpdateService updateService = UpdateService.getInstance(this);
 //    updateService.checkUpdate();
-    //获取渠道名称 channel表示渠道
-    String channel = getChannelFromApk(this, "channel-");
-    if (StringUtils.isEmpty(channel)) {
-      channel = "tengxun";
-    }
-    if (DEBUG) {
-      Utils.toast(this,"当前渠道:" + channel);
-    }
   }
 
   private void initBaiduLocClient() {

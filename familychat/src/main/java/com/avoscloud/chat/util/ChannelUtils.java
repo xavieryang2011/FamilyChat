@@ -13,6 +13,7 @@ import java.util.zip.ZipFile;
  */
 
 public class ChannelUtils {
+    public static String CHANNELKEY="cztchannel_";
     /**
      * 从apk中获取版本信息
      * @param context

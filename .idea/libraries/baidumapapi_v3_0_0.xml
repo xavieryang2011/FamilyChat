@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="baidumapapi_v3_0_0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/leanchat/libs/baidumapapi_v3_0_0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/familychat/libs/baidumapapi_v3_0_0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
