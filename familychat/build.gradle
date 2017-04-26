@@ -12,7 +12,7 @@ android {
     }
     signingConfigs{
         myConfig{
-            storeFile file("keystore/chat_keystore.jks")
+            storeFile file("keystore/chat_keystore")
             storePassword "family_chat_20170420_xavier"
             keyAlias "familychat"
             keyPassword "family_chat_20170420_xavier"
