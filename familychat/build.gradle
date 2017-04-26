@@ -22,10 +22,11 @@ android {
         release {
             signingConfig signingConfigs.myConfig
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
         }
         debug{
             signingConfig signingConfigs.myConfig
+            minifyEnabled false
         }
     }
 
@@ -54,9 +55,14 @@ dependencies {
     compile('cn.leancloud.android:chatkit:1.0.+')
     compile('com.yunzhanghu.redpacket:redpacket-wallet:3.4.5')
 
-    compile 'org.ocpsoft.prettytime:prettytime:3.2.7.Final'
+    compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
     compile 'cn.leancloud.android:avoscloud-statistics:v3.4.5@aar'
     compile 'org.apache.httpcomponents:httpmime:4.2.4'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.github.stuxuhai:jpinyin:1.0'
+    //debug
+    debugCompile 'com.facebook.stetho:stetho:1.4.2'
+//    debugCompile 'com.facebook.stetho:stetho-urlconnection:1.5.0'
+//    debugCompile 'com.facebook.stetho:stetho-js-rhino:1.5.0'
+
 }

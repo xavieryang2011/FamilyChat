@@ -19,6 +19,7 @@ import com.avoscloud.chat.service.PushManager;
 import com.avoscloud.chat.util.LeanchatUserProvider;
 import com.avoscloud.chat.util.Utils;
 import com.baidu.mapapi.SDKInitializer;
+import com.facebook.stetho.Stetho;
 import com.yunzhanghu.redpacketsdk.RPInitRedPacketCallback;
 import com.yunzhanghu.redpacketsdk.RPValueCallback;
 import com.yunzhanghu.redpacketsdk.RedPacket;
@@ -57,6 +58,7 @@ public class App extends Application {
     AVIMMessageManager.registerAVIMMessageType(LCIMTransferMessage.class);
     LCChatKit.getInstance().setProfileProvider(new LeanchatUserProvider());
     LCChatKit.getInstance().init(this, appId, appKey);
+    Stetho.initializeWithDefaults(this);
 
     // 初始化红包操作
     RedPacket.getInstance().initRedPacket(ctx, RPConstant.AUTH_METHOD_SIGN, new RPInitRedPacketCallback() {
