@@ -73,12 +73,12 @@ public class ProfileFragment extends BaseFragment {
     private void refresh() {
         LeanchatUser curUser = LeanchatUser.getCurrentUser();
         userNameView.setText(curUser.getUsername());
-//        if (curUser.getAvatarUrl() == null || curUser.getAvatarUrl().equals("")) {
-//            Picasso.with(getContext()).load(R.drawable.lcim_default_avatar_icon).into(avatarView);
-//        } else {
+        if (curUser.getAvatarUrl() == null || curUser.getAvatarUrl().equals("")) {
+            Picasso.with(getContext()).load(R.drawable.lcim_default_avatar_icon).into(avatarView);
+        } else {
             LogUtils.d("avatarUrl",curUser.getAvatarUrl());
             Picasso.with(getContext()).load(curUser.getAvatarUrl()).into(avatarView);
-//        }
+        }
     }
 
     @OnClick(R.id.profile_checkupdate_view)

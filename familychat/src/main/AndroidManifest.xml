@@ -44,7 +44,8 @@
 
         <activity
             android:name=".activity.ChatRoomActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="cn.leanclud.imkit.conversation_item_click_action"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -78,7 +79,8 @@
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
-            android:theme="@style/LCIMActivity.NoActionBar">
+            android:theme="@style/LCIMActivity.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.avos.leanchart.MAIN_ACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -89,7 +91,8 @@
 
         <activity
             android:name=".activity.EntrySplashActivity"
-            android:theme="@style/LCIMActivity.NoActionBar">
+            android:theme="@style/LCIMActivity.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -100,28 +103,37 @@
 
         <activity
             android:name=".activity.EntryLoginActivity"
-            android:theme="@style/LCIMActivity.NoActionBar"/>
+            android:theme="@style/LCIMActivity.NoActionBar"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.EntryRegisterActivity"
-            android:theme="@style/LCIMActivity.NoActionBar"/>
+            android:theme="@style/LCIMActivity.NoActionBar"
+            android:screenOrientation="portrait"/>
 
-        <activity android:name=".friends.ContactNewFriendActivity"/>
+        <activity android:name=".friends.ContactNewFriendActivity"
+                  android:screenOrientation="portrait"/>
 
-        <activity android:name=".friends.ContactAddFriendActivity"/>
+        <activity android:name=".friends.ContactAddFriendActivity"
+                  android:screenOrientation="portrait"/>
 
-        <activity android:name=".friends.ContactPersonInfoActivity"/>
+        <activity android:name=".friends.ContactPersonInfoActivity"
+                  android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.ProfileNotifySettingActivity"/>
+        <activity android:name=".activity.ProfileNotifySettingActivity"
+                  android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.ConversationGroupListActivity"
+            android:screenOrientation="portrait"
             android:label="@string/conversation_group"/>
 
-        <activity android:name=".activity.ConversationDetailActivity"/>
+        <activity android:name=".activity.ConversationDetailActivity"
+                  android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.ConversationAddMembersActivity"
+            android:screenOrientation="portrait"
             android:label="@string/conversation_inviteMembers"/>
 
         <service
